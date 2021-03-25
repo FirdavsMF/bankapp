@@ -1,5 +1,7 @@
 package types
 
+
+
 // Money представляет собой денеэную сумму в минималных единиц (центы, копейки, дирамы и т.д)
 type Money int64
 
@@ -32,3 +34,10 @@ type Payment struct {
 	ID int
 	Amount Money
 }
+
+type PaymentSource struct {
+	Type string // 'card'
+	Number string // номер вида '5058 xxxx xxxx 8888'
+	Balance Money // баланс в дирамах
+   }
+   
